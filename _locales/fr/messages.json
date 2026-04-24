@@ -1,0 +1,419 @@
+{
+  "extensionName": {
+    "message": "Chromapicker - Sélecteur et mélangeur de couleurs"
+  },
+  "extensionDescription": {
+    "message": "Capturez des couleurs sur toute page web, extrayez des palettes entières, créez vos propres mélanges. Alt+P pour piper n'importe où."
+  },
+  "actionTitle": {
+    "message": "Chromapicker - Sélecteur de couleurs (Alt+P)"
+  },
+  "commandPickColor": {
+    "message": "Sélectionner une couleur depuis n'importe quel endroit de la page"
+  },
+  "pickButton": {
+    "message": "Sélectionner"
+  },
+  "extractButton": {
+    "message": "Extraire"
+  },
+  "extractFromPage": {
+    "message": "Depuis la page actuelle"
+  },
+  "extractFromImage": {
+    "message": "Depuis une image..."
+  },
+  "lastCapture": {
+    "message": "Dernière capture"
+  },
+  "nothingYet": {
+    "message": "rien pour l'instant"
+  },
+  "justNow": {
+    "message": "à l'instant"
+  },
+  "minutesAgo": {
+    "message": "il y a $MINUTES$ min",
+    "placeholders": {
+      "minutes": {
+        "content": "$1"
+      }
+    }
+  },
+  "hoursAgo": {
+    "message": "il y a $HOURS$ h",
+    "placeholders": {
+      "hours": {
+        "content": "$1"
+      }
+    }
+  },
+  "daysAgo": {
+    "message": "il y a $DAYS$ j",
+    "placeholders": {
+      "days": {
+        "content": "$1"
+      }
+    }
+  },
+  "toolMix": {
+    "message": "Mélange"
+  },
+  "toolMixTitle": {
+    "message": "Mélanger deux couleurs et appliquer des effets"
+  },
+  "toolHarmony": {
+    "message": "Harmonie"
+  },
+  "toolHarmonyTitle": {
+    "message": "Harmonies chromatiques depuis cette couleur"
+  },
+  "toolGradient": {
+    "message": "Dégradé"
+  },
+  "toolGradientTitle": {
+    "message": "Construire un dégradé CSS"
+  },
+  "toolScale": {
+    "message": "Échelle"
+  },
+  "toolScaleTitle": {
+    "message": "Générer une échelle tonale de 11 nuances (prête pour un design system)"
+  },
+  "advancedFormats": {
+    "message": "Formats avancés"
+  },
+  "history": {
+    "message": "Historique"
+  },
+  "export": {
+    "message": "Exporter"
+  },
+  "clear": {
+    "message": "Effacer"
+  },
+  "copyAll": {
+    "message": "Tout copier"
+  },
+  "saveAll": {
+    "message": "Tout enregistrer"
+  },
+  "saveAllToHistory": {
+    "message": "Tout enregistrer dans l'historique"
+  },
+  "copy": {
+    "message": "Copier"
+  },
+  "close": {
+    "message": "Fermer"
+  },
+  "mixHeading": {
+    "message": "Mélange et fusion"
+  },
+  "mixSubtitle": {
+    "message": "Créez des couleurs uniques depuis votre palette"
+  },
+  "mixBlend": {
+    "message": "Mélange"
+  },
+  "mixEffect": {
+    "message": "Effet"
+  },
+  "mixEffectNone": {
+    "message": "aucun"
+  },
+  "mixEffectTint": {
+    "message": "teinte (plus clair)"
+  },
+  "mixEffectShade": {
+    "message": "ombre (plus foncé)"
+  },
+  "mixEffectSaturate": {
+    "message": "saturer"
+  },
+  "mixEffectDesaturate": {
+    "message": "désaturer"
+  },
+  "mixEffectWarm": {
+    "message": "plus chaud"
+  },
+  "mixEffectCool": {
+    "message": "plus froid"
+  },
+  "harmonyHeading": {
+    "message": "Harmonies chromatiques"
+  },
+  "harmonyFrom": {
+    "message": "depuis $HEX$",
+    "placeholders": {
+      "hex": {
+        "content": "$1"
+      }
+    }
+  },
+  "harmonyComplementary": {
+    "message": "Compl."
+  },
+  "harmonyAnalogous": {
+    "message": "Analog."
+  },
+  "harmonyTriadic": {
+    "message": "Triadique"
+  },
+  "harmonySplit": {
+    "message": "Divisée"
+  },
+  "harmonyTetradic": {
+    "message": "Tétrade"
+  },
+  "harmonyMono": {
+    "message": "Mono"
+  },
+  "harmonyHint": {
+    "message": "Cliquez sur une nuance pour copier · clic droit pour enregistrer dans l'historique"
+  },
+  "gradientHeading": {
+    "message": "Constructeur de dégradé"
+  },
+  "gradientStopsMeta": {
+    "message": "$COUNT$ arrêts · $TYPE$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "type": {
+        "content": "$2"
+      }
+    }
+  },
+  "gradientType": {
+    "message": "Type"
+  },
+  "gradientAngle": {
+    "message": "Angle"
+  },
+  "gradientLinear": {
+    "message": "Linéaire"
+  },
+  "gradientRadial": {
+    "message": "Radial"
+  },
+  "gradientConic": {
+    "message": "Conique"
+  },
+  "scaleHeading": {
+    "message": "Échelle tonale"
+  },
+  "scaleSubtitle": {
+    "message": "11 nuances depuis $HEX$",
+    "placeholders": {
+      "hex": {
+        "content": "$1"
+      }
+    }
+  },
+  "scaleHint": {
+    "message": "Chaque nuance affiche le contraste WCAG vs. blanc / noir. AA = passe 4.5:1, AAA = passe 7:1."
+  },
+  "scaleCopyCode": {
+    "message": "Copier le code"
+  },
+  "paletteHeading": {
+    "message": "Palette de la page"
+  },
+  "paletteCount": {
+    "message": "$COUNT$ couleurs",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "paletteHint": {
+    "message": "Cliquez une couleur pour la copier, ou l'icône loupe pour voir où elle est utilisée sur la page."
+  },
+  "imageHeading": {
+    "message": "Palette d'image"
+  },
+  "imageCountLabel": {
+    "message": "Couleurs à extraire"
+  },
+  "exportHeading": {
+    "message": "Exporter la palette"
+  },
+  "exportCopy": {
+    "message": "Copier dans le presse-papiers"
+  },
+  "exportDownload": {
+    "message": "Télécharger"
+  },
+  "footPickHint": {
+    "message": "Alt+P"
+  },
+  "footAbout": {
+    "message": "à propos"
+  },
+  "footIssues": {
+    "message": "signaler"
+  },
+  "toastCopied": {
+    "message": "$VALUE$ copié",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "toastSaved": {
+    "message": "$VALUE$ enregistré",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "toastCopiedCount": {
+    "message": "$COUNT$ couleurs copiées",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "toastAddedToHistory": {
+    "message": "$COUNT$ ajoutées à l'historique",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "toastNothingToCopy": {
+    "message": "Rien à copier"
+  },
+  "toastCodeCopied": {
+    "message": "Code copié"
+  },
+  "toastCouldNotHighlight": {
+    "message": "Impossible de surligner"
+  },
+  "toastHighlighting": {
+    "message": "Surlignage sur la page"
+  },
+  "toastImageReadFailed": {
+    "message": "Impossible de lire l'image"
+  },
+  "toastEyeDropperUnavailable": {
+    "message": "API EyeDropper indisponible (nécessite Edge/Chrome 95+)"
+  },
+  "toastPickCancelled": {
+    "message": "Sélection annulée"
+  },
+  "toastCaptured": {
+    "message": "$HEX$ capturé",
+    "placeholders": {
+      "hex": {
+        "content": "$1"
+      }
+    }
+  },
+  "p3SourceDetected": {
+    "message": "La page utilise des couleurs gamut étendu"
+  },
+  "p3SourceNotDetected": {
+    "message": "Page sRGB"
+  },
+  "p3DisplayCapable": {
+    "message": "Écran compatible P3"
+  },
+  "p3DisplayIncapable": {
+    "message": "Écran limité au sRGB"
+  },
+  "welcomeTitle": {
+    "message": "Bienvenue sur Chromapicker"
+  },
+  "welcomeHeading1": {
+    "message": "Bienvenue - on va"
+  },
+  "welcomeHeadingPin": {
+    "message": "épingler"
+  },
+  "welcomeHeading2": {
+    "message": "Chromapicker à votre barre d'outils"
+  },
+  "welcomeSubtitle": {
+    "message": "Épingler rend le sélecteur de couleurs accessible en un clic depuis toute page web. Cela prend cinq secondes."
+  },
+  "welcomeQuickSetup": {
+    "message": "Configuration rapide"
+  },
+  "welcomeStep1Title": {
+    "message": "Trouvez le menu extensions"
+  },
+  "welcomeStep1Body": {
+    "message": "Cliquez sur l'icône pièce de puzzle en haut à droite du navigateur."
+  },
+  "welcomeStep2Title": {
+    "message": "Repérez Chromapicker dans la liste"
+  },
+  "welcomeStep2BodyPrefix": {
+    "message": "Cherchez"
+  },
+  "welcomeStep2BodySuffix": {
+    "message": "parmi vos extensions installées."
+  },
+  "welcomeStep3Title": {
+    "message": "Cliquez l'icône d'épingle"
+  },
+  "welcomeStep3Body": {
+    "message": "Activez la petite punaise pour qu'elle devienne colorée. C'est tout - Chromapicker vit maintenant dans votre barre d'outils."
+  },
+  "welcomeClickToPin": {
+    "message": "Cliquez pour épingler"
+  },
+  "welcomePinBubbleTitle": {
+    "message": "Épinglez Chromapicker à votre barre d'outils"
+  },
+  "welcomePinBubbleBody": {
+    "message": "Cliquez la pièce de puzzle en haut à droite du navigateur, puis activez la punaise à côté de Chromapicker."
+  },
+  "welcomeFeaturePick": {
+    "message": "Capturer"
+  },
+  "welcomeFeaturePickDesc": {
+    "message": "n'importe quel pixel - ou pressez"
+  },
+  "welcomeFeatureExtract": {
+    "message": "Extraire"
+  },
+  "welcomeFeatureExtractDesc": {
+    "message": "toutes les couleurs d'une page ou d'une image"
+  },
+  "welcomeFeatureMix": {
+    "message": "Mélanger"
+  },
+  "welcomeFeatureMixDesc": {
+    "message": "fusionner en RGB / HSL / OKLCH"
+  },
+  "welcomeFeatureHarmony": {
+    "message": "Harmonie"
+  },
+  "welcomeFeatureHarmonyDesc": {
+    "message": "générer triadique, analogique, etc."
+  },
+  "welcomeBuiltBy": {
+    "message": "Créé par"
+  },
+  "welcomeSource": {
+    "message": "source"
+  },
+  "welcomeReportIssue": {
+    "message": "signaler un problème"
+  },
+  "emptyHistory": {
+    "message": "Aucune couleur pour l'instant."
+  },
+  "emptyHistoryPrompt": {
+    "message": "Aucune couleur. Commencez par en capturer."
+  }
+}

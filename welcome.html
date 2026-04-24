@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title data-i18n="welcomeTitle">Welcome to Chromapicker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #1F1F1E;
+      --surface: #262625;
+      --surface-hi: #2f2e2d;
+      --line: #3a3938;
+      --line-soft: #2b2a29;
+      --ink: #BFBEB3;
+      --ink-muted: #8c8b82;
+      --ink-dim: #5f5e57;
+      --accent: #C6613F;
+      --accent-ink: #1F1F1E;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      min-height: 100vh;
+      font-feature-settings: "ss01", "tnum";
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      background:
+        radial-gradient(80% 60% at 50% 0%, rgba(198, 97, 63, 0.10), transparent 70%),
+        var(--bg);
+    }
+
+    .wrap {
+      max-width: 560px;
+      width: 100%;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .brand__dot {
+      width: 40px; height: 40px;
+      object-fit: contain;
+    }
+    .brand__name {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .hero p {
+      font-size: 15px;
+      color: var(--ink-muted);
+      line-height: 1.55;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .guide {
+      background: var(--surface);
+      border: 1px solid var(--line-soft);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .guide__title {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      margin-bottom: 16px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .step__num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+      font-feature-settings: "tnum";
+    }
+
+    .step__body strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .step__body span {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .step__icon-inline {
+      display: inline-grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 5px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      vertical-align: -6px;
+      margin: 0 2px;
+      color: var(--ink-muted);
+    }
+
+    .pin-demo {
+      margin-top: 14px;
+      padding: 14px;
+      background: var(--bg);
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+    .pin-demo__arrow {
+      font-size: 18px;
+      color: var(--accent);
+      animation: nudge 1.6s ease-in-out infinite;
+    }
+    @keyframes nudge {
+      0%, 100% { transform: translateX(0); }
+      50%      { transform: translateX(4px); }
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12.5px;
+      color: var(--ink-muted);
+    }
+    .feature__icon {
+      width: 28px; height: 28px;
+      border-radius: 6px;
+      background: rgba(198, 97, 63, 0.12);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .feature strong {
+      color: var(--ink);
+      font-weight: 500;
+      display: block;
+      font-size: 13px;
+    }
+
+    .links {
+      text-align: center;
+      font-size: 11px;
+      color: var(--ink-dim);
+      letter-spacing: 0.02em;
+      padding-top: 18px;
+      border-top: 1px dashed var(--line-soft);
+    }
+    .links a {
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .links a:hover { color: var(--accent); }
+
+    /* =====================================================
+       Pin bubble - pinned to top-right, creates illusion
+       of pointing to the browser's extensions button
+       ===================================================== */
+    .pin-bubble {
+      position: fixed;
+      top: 12px;
+      right: 20px;
+      z-index: 100;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: center;
+      max-width: 420px;
+      padding: 14px 18px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      border-radius: 12px;
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.45), 0 4px 10px -4px rgba(198, 97, 63, 0.4);
+      animation: bubble-in 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.2) 0.3s both;
+    }
+
+    /* Only the decorative tail nudges, not the whole bubble —
+       that way the close button stays a stationary click target */
+    .pin-bubble__tail {
+      animation: tail-nudge 2.2s ease-in-out 0.8s infinite;
+    }
+
+    /* Triangle tail pointing up toward the browser toolbar */
+    .pin-bubble__tail {
+      position: absolute;
+      top: -8px;
+      right: 50px;
+      width: 0;
+      height: 0;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-bottom: 9px solid var(--accent);
+    }
+
+    .pin-bubble__icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(31, 31, 30, 0.12);
+      display: grid;
+      place-items: center;
+      color: var(--accent-ink);
+      flex-shrink: 0;
+    }
+
+    .pin-bubble__text {
+      min-width: 0;
+    }
+    .pin-bubble__text strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 2px;
+    }
+    .pin-bubble__text span {
+      font-size: 11.5px;
+      line-height: 1.45;
+      opacity: 0.9;
+      display: block;
+    }
+    .pin-bubble__text em {
+      font-style: normal;
+      font-weight: 600;
+      background: rgba(31, 31, 30, 0.15);
+      padding: 0 5px;
+      border-radius: 3px;
+    }
+
+    @keyframes bubble-in {
+      from { opacity: 0; transform: translateY(-20px) scale(0.95); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes tail-nudge {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-3px); }
+    }
+
+    /* Hide on narrow screens - bubble would overlap content */
+    @media (max-width: 560px) {
+      .pin-bubble { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Speech-bubble indicator - creates the illusion of pointing at the toolbar -->
+  <div class="pin-bubble" id="pinBubble">
+    <div class="pin-bubble__tail"></div>
+    <div class="pin-bubble__icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 17v5"/>
+        <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1Z"/>
+      </svg>
+    </div>
+    <div class="pin-bubble__text">
+      <strong data-i18n="welcomePinBubbleTitle">Pin Chromapicker to your toolbar</strong>
+      <span><span data-i18n="welcomePinBubbleBody">Click the <em>puzzle piece</em> in the top-right of your browser, then toggle the pin next to Chromapicker.</span></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="brand">
+      <img class="brand__dot" src="icons/icon128.png" alt="">
+      <div class="brand__name">Chromapicker</div>
+    </div>
+
+    <div class="hero">
+      <h1>Welcome - let's <em>pin</em> Chromapicker to your toolbar</h1>
+      <p>Pinning makes the color picker one click away from every web page. Takes five seconds.</p>
+    </div>
+
+    <div class="guide">
+      <div class="guide__title" data-i18n="welcomeQuickSetup">Quick setup</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">1</div>
+          <div class="step__body">
+            <strong data-i18n="welcomeStep1Title">Find the extensions menu</strong>
+            <span>
+              Click the puzzle piece
+              <span class="step__icon-inline" title="Extensions">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 2c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/>
+                </svg>
+              </span>
+              icon in the top-right of your browser.
+            </span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__num">2</div>
+          <div class="step__body">
+            <strong data-i18n="welcomeStep2Title">Find Chromapicker in the list</strong>
+            <span class="step2-body"><span data-i18n="welcomeStep2BodyPrefix">Look for</span> <strong style="color:var(--accent);display:inline">Chromapicker - Color Picker &amp; Mixer</strong> <span data-i18n="welcomeStep2BodySuffix">among your installed extensions.</span></span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__num">3</div>
+          <div class="step__body">
+            <strong data-i18n="welcomeStep3Title">Click the pin icon</strong>
+            <span>Toggle the small pushpin icon so it turns accent-colored. That's it - Chromapicker now lives in your toolbar.</span>
+            <div class="pin-demo">
+              <span>Chromapicker</span>
+              <span class="pin-demo__arrow">→</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1Z"/>
+              </svg>
+              <span style="color:var(--accent);font-weight:500" data-i18n="welcomeClickToPin">Click to pin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature__icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/>
+            <path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l.4.4a2.1 2.1 0 1 1-3 3l-3.8-3.8a2.1 2.1 0 1 1 3-3l.4.4Z"/>
+          </svg>
+        </div>
+        <div><strong data-i18n="welcomeFeaturePick">Pick</strong><span data-i18n="welcomeFeaturePickDesc">any pixel - or press</span> <kbd style="font-family:inherit;background:var(--bg);padding:1px 5px;border-radius:3px;font-size:11px">Alt+P</kbd></div>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 0 0 0 20c1.5 0 3-.5 3-2 0-1.5-1.5-2.5-1.5-4S15 14 17 14c2.5 0 5-1.5 5-4.5A9.8 9.8 0 0 0 12 2Z"/>
+          </svg>
+        </div>
+        <div><strong data-i18n="welcomeFeatureExtract">Extract</strong><span data-i18n="welcomeFeatureExtractDesc">every color from a page or image</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20"/><path d="M17 5.5c0 2.5-5 4.5-5 6.5"/><path d="M7 5.5c0 2.5 5 4.5 5 6.5"/><path d="M4 18c2.5 0 4-2 8-2s5.5 2 8 2"/>
+          </svg>
+        </div>
+        <div><strong data-i18n="welcomeFeatureMix">Mix</strong><span data-i18n="welcomeFeatureMixDesc">blend in RGB / HSL / OKLCH</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/>
+          </svg>
+        </div>
+        <div><strong data-i18n="welcomeFeatureHarmony">Harmony</strong><span data-i18n="welcomeFeatureHarmonyDesc">generate triadic, analogous, etc.</span></div>
+      </div>
+    </div>
+
+    <div class="links">
+      <span data-i18n="welcomeBuiltBy">Built by</span>
+      <a href="https://github.com/mthcht" target="_blank" rel="noopener">mthcht</a>
+      · <a href="https://github.com/mthcht/chromapicker" target="_blank" rel="noopener" data-i18n="welcomeSource">source</a>
+      · <a href="https://github.com/mthcht/chromapicker/issues/new" target="_blank" rel="noopener" data-i18n="welcomeReportIssue">report an issue</a>
+    </div>
+  </div>
+
+  <script>
+    // Localize welcome page strings from _locales/<lang>/messages.json
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      try {
+        const key = el.dataset.i18n;
+        const msg = chrome.i18n.getMessage(key);
+        if (msg) {
+          // Heading fragment uses its own logic; handled separately below
+          if (el.tagName === 'TITLE') el.textContent = msg;
+          else if (el.querySelector('em')) {
+            // Preserve <em> tags in the translation if the translation uses them
+            el.innerHTML = msg;
+          } else {
+            el.textContent = msg;
+          }
+        }
+      } catch (_) {}
+    });
+
+    // Welcome heading: "Welcome - let's [pin] Chromapicker to your toolbar"
+    // Uses three separate keys to preserve the accent-colored word
+    try {
+      const h1 = document.querySelector('.hero h1');
+      if (h1) {
+        const p1 = chrome.i18n.getMessage('welcomeHeading1');
+        const pinWord = chrome.i18n.getMessage('welcomeHeadingPin');
+        const p2 = chrome.i18n.getMessage('welcomeHeading2');
+        if (p1 && pinWord && p2) {
+          h1.innerHTML = p1 + ' <em>' + pinWord + '</em> ' + p2;
+        }
+      }
+      const subtitle = document.querySelector('.hero p');
+      if (subtitle) {
+        const s = chrome.i18n.getMessage('welcomeSubtitle');
+        if (s) subtitle.textContent = s;
+      }
+    } catch (_) {}
+
+    // Steps body + features
+    const staticText = {
+      '.step:nth-child(1) .step__body span': 'welcomeStep1Body',
+      '.step:nth-child(3) .step__body span:first-of-type': 'welcomeStep3Body',
+    };
+    for (const [sel, key] of Object.entries(staticText)) {
+      try {
+        const el = document.querySelector(sel);
+        if (el) {
+          const msg = chrome.i18n.getMessage(key);
+          if (msg) el.innerHTML = msg;
+        }
+      } catch (_) {}
+    }
+  </script>
+</body>
+</html>

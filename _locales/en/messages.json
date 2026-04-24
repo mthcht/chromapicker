@@ -1,0 +1,423 @@
+{
+  "extensionName": {
+    "message": "Chromapicker - Color Picker & Mixer",
+    "description": "The extension name shown in the store and the browser"
+  },
+  "extensionDescription": {
+    "message": "Pick colors from any web page, extract entire page palettes, mix your own unique shades. Alt+P to pick anywhere.",
+    "description": "Short description shown in the extension store"
+  },
+  "actionTitle": {
+    "message": "Chromapicker - Color Picker (Alt+P)",
+    "description": "Tooltip on the browser toolbar icon"
+  },
+  "commandPickColor": {
+    "message": "Pick a color from anywhere on the current page",
+    "description": "Description of the Alt+P keyboard shortcut"
+  },
+  "pickButton": {
+    "message": "Pick"
+  },
+  "extractButton": {
+    "message": "Extract"
+  },
+  "extractFromPage": {
+    "message": "From current page"
+  },
+  "extractFromImage": {
+    "message": "From an image..."
+  },
+  "lastCapture": {
+    "message": "Last capture"
+  },
+  "nothingYet": {
+    "message": "nothing picked yet"
+  },
+  "justNow": {
+    "message": "just now"
+  },
+  "minutesAgo": {
+    "message": "$MINUTES$m ago",
+    "placeholders": {
+      "minutes": {
+        "content": "$1"
+      }
+    }
+  },
+  "hoursAgo": {
+    "message": "$HOURS$h ago",
+    "placeholders": {
+      "hours": {
+        "content": "$1"
+      }
+    }
+  },
+  "daysAgo": {
+    "message": "$DAYS$d ago",
+    "placeholders": {
+      "days": {
+        "content": "$1"
+      }
+    }
+  },
+  "toolMix": {
+    "message": "Mix"
+  },
+  "toolMixTitle": {
+    "message": "Mix two colors & apply effects"
+  },
+  "toolHarmony": {
+    "message": "Harmony"
+  },
+  "toolHarmonyTitle": {
+    "message": "Color harmonies from this color"
+  },
+  "toolGradient": {
+    "message": "Gradient"
+  },
+  "toolGradientTitle": {
+    "message": "Build a CSS gradient"
+  },
+  "toolScale": {
+    "message": "Scale"
+  },
+  "toolScaleTitle": {
+    "message": "Generate 11-step tonal scale (design-system ready)"
+  },
+  "advancedFormats": {
+    "message": "Advanced formats"
+  },
+  "history": {
+    "message": "History"
+  },
+  "export": {
+    "message": "Export"
+  },
+  "clear": {
+    "message": "Clear"
+  },
+  "copyAll": {
+    "message": "Copy all"
+  },
+  "saveAll": {
+    "message": "Save all"
+  },
+  "saveAllToHistory": {
+    "message": "Save all to history"
+  },
+  "copy": {
+    "message": "Copy"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "mixHeading": {
+    "message": "Mix & blend"
+  },
+  "mixSubtitle": {
+    "message": "Create unique colors from your palette"
+  },
+  "mixBlend": {
+    "message": "Blend"
+  },
+  "mixEffect": {
+    "message": "Effect"
+  },
+  "mixEffectNone": {
+    "message": "none"
+  },
+  "mixEffectTint": {
+    "message": "tint (lighter)"
+  },
+  "mixEffectShade": {
+    "message": "shade (darker)"
+  },
+  "mixEffectSaturate": {
+    "message": "saturate"
+  },
+  "mixEffectDesaturate": {
+    "message": "desaturate"
+  },
+  "mixEffectWarm": {
+    "message": "warmer"
+  },
+  "mixEffectCool": {
+    "message": "cooler"
+  },
+  "harmonyHeading": {
+    "message": "Color harmonies"
+  },
+  "harmonyFrom": {
+    "message": "from $HEX$",
+    "placeholders": {
+      "hex": {
+        "content": "$1"
+      }
+    }
+  },
+  "harmonyComplementary": {
+    "message": "Compl."
+  },
+  "harmonyAnalogous": {
+    "message": "Analog."
+  },
+  "harmonyTriadic": {
+    "message": "Triadic"
+  },
+  "harmonySplit": {
+    "message": "Split"
+  },
+  "harmonyTetradic": {
+    "message": "Tetrad."
+  },
+  "harmonyMono": {
+    "message": "Mono"
+  },
+  "harmonyHint": {
+    "message": "Click a swatch to copy · right-click to save to history"
+  },
+  "gradientHeading": {
+    "message": "Gradient builder"
+  },
+  "gradientStopsMeta": {
+    "message": "$COUNT$ stops · $TYPE$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "type": {
+        "content": "$2"
+      }
+    }
+  },
+  "gradientType": {
+    "message": "Type"
+  },
+  "gradientAngle": {
+    "message": "Angle"
+  },
+  "gradientLinear": {
+    "message": "Linear"
+  },
+  "gradientRadial": {
+    "message": "Radial"
+  },
+  "gradientConic": {
+    "message": "Conic"
+  },
+  "scaleHeading": {
+    "message": "Tonal scale"
+  },
+  "scaleSubtitle": {
+    "message": "11 steps from $HEX$",
+    "placeholders": {
+      "hex": {
+        "content": "$1"
+      }
+    }
+  },
+  "scaleHint": {
+    "message": "Each step shows WCAG contrast vs. white / black. AA marks pass 4.5:1, AAA marks pass 7:1."
+  },
+  "scaleCopyCode": {
+    "message": "Copy code"
+  },
+  "paletteHeading": {
+    "message": "Page palette"
+  },
+  "paletteCount": {
+    "message": "$COUNT$ colors",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "paletteHint": {
+    "message": "Click a color to copy, or use the magnifier icon to highlight where it's used on the page."
+  },
+  "imageHeading": {
+    "message": "Image palette"
+  },
+  "imageCountLabel": {
+    "message": "Colors to extract"
+  },
+  "exportHeading": {
+    "message": "Export palette"
+  },
+  "exportCopy": {
+    "message": "Copy to clipboard"
+  },
+  "exportDownload": {
+    "message": "Download"
+  },
+  "footPickHint": {
+    "message": "Alt+P"
+  },
+  "footAbout": {
+    "message": "about"
+  },
+  "footIssues": {
+    "message": "issues"
+  },
+  "toastCopied": {
+    "message": "$VALUE$ copied",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "toastSaved": {
+    "message": "$VALUE$ saved",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "toastCopiedCount": {
+    "message": "$COUNT$ colors copied",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "toastAddedToHistory": {
+    "message": "$COUNT$ added to history",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "toastNothingToCopy": {
+    "message": "Nothing to copy"
+  },
+  "toastCodeCopied": {
+    "message": "Code copied"
+  },
+  "toastCouldNotHighlight": {
+    "message": "Could not highlight"
+  },
+  "toastHighlighting": {
+    "message": "Highlighting on page"
+  },
+  "toastImageReadFailed": {
+    "message": "Could not read image"
+  },
+  "toastEyeDropperUnavailable": {
+    "message": "EyeDropper API unavailable (need Edge/Chrome 95+)"
+  },
+  "toastPickCancelled": {
+    "message": "Pick cancelled"
+  },
+  "toastCaptured": {
+    "message": "$HEX$ captured",
+    "placeholders": {
+      "hex": {
+        "content": "$1"
+      }
+    }
+  },
+  "p3SourceDetected": {
+    "message": "Page uses wide-gamut colors"
+  },
+  "p3SourceNotDetected": {
+    "message": "sRGB page"
+  },
+  "p3DisplayCapable": {
+    "message": "Display supports P3"
+  },
+  "p3DisplayIncapable": {
+    "message": "Display limited to sRGB"
+  },
+  "welcomeTitle": {
+    "message": "Welcome to Chromapicker"
+  },
+  "welcomeHeading1": {
+    "message": "Welcome - let's"
+  },
+  "welcomeHeadingPin": {
+    "message": "pin"
+  },
+  "welcomeHeading2": {
+    "message": "Chromapicker to your toolbar"
+  },
+  "welcomeSubtitle": {
+    "message": "Pinning makes the color picker one click away from every web page. Takes five seconds."
+  },
+  "welcomeQuickSetup": {
+    "message": "Quick setup"
+  },
+  "welcomeStep1Title": {
+    "message": "Find the extensions menu"
+  },
+  "welcomeStep1Body": {
+    "message": "Click the puzzle piece icon in the top-right of your browser."
+  },
+  "welcomeStep2Title": {
+    "message": "Find Chromapicker in the list"
+  },
+  "welcomeStep2BodyPrefix": {
+    "message": "Look for"
+  },
+  "welcomeStep2BodySuffix": {
+    "message": "among your installed extensions."
+  },
+  "welcomeStep3Title": {
+    "message": "Click the pin icon"
+  },
+  "welcomeStep3Body": {
+    "message": "Toggle the small pushpin icon so it turns accent-colored. That's it - Chromapicker now lives in your toolbar."
+  },
+  "welcomeClickToPin": {
+    "message": "Click to pin"
+  },
+  "welcomePinBubbleTitle": {
+    "message": "Pin Chromapicker to your toolbar"
+  },
+  "welcomePinBubbleBody": {
+    "message": "Click the puzzle piece in the top-right of your browser, then toggle the pin next to Chromapicker."
+  },
+  "welcomeFeaturePick": {
+    "message": "Pick"
+  },
+  "welcomeFeaturePickDesc": {
+    "message": "any pixel - or press"
+  },
+  "welcomeFeatureExtract": {
+    "message": "Extract"
+  },
+  "welcomeFeatureExtractDesc": {
+    "message": "every color from a page or image"
+  },
+  "welcomeFeatureMix": {
+    "message": "Mix"
+  },
+  "welcomeFeatureMixDesc": {
+    "message": "blend in RGB / HSL / OKLCH"
+  },
+  "welcomeFeatureHarmony": {
+    "message": "Harmony"
+  },
+  "welcomeFeatureHarmonyDesc": {
+    "message": "generate triadic, analogous, etc."
+  },
+  "welcomeBuiltBy": {
+    "message": "Built by"
+  },
+  "welcomeSource": {
+    "message": "source"
+  },
+  "welcomeReportIssue": {
+    "message": "report an issue"
+  },
+  "emptyHistory": {
+    "message": "No colors yet."
+  },
+  "emptyHistoryPrompt": {
+    "message": "No colors yet. Pick some first."
+  }
+}
