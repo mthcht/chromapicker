@@ -1,5 +1,8 @@
 # 🎨 Chromapicker
 
+
+<img width="128" height="128" alt="icon128" src="https://github.com/user-attachments/assets/4991c32d-1237-489b-9158-f52b9f42fe4f" />
+
 > Pick, extract, mix and analyze colors from any web page - with OKLCH precision.
 
 A polished browser extension for developers, designers and anyone who works with color on the web. Pixel-perfect picking, full-page color extraction, image palette analysis, color mixing in perceptually uniform color spaces, harmony generators, and a CSS gradient builder - all in one extension.
