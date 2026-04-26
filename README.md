@@ -9,6 +9,14 @@ A polished browser extension for developers, designers and anyone who works with
 
 Works in **Microsoft Edge**, **Google Chrome**, **Brave**, **Arc**, **Opera**, and any other Chromium-based browser (version 95 or later).
 
+<img width="1124" height="674" alt="Capture d&#39;écran 2026-04-26 220732" src="https://github.com/user-attachments/assets/86d70fe9-ddcf-463a-ba1d-ca834cce6415" />
+<img width="351" height="586" alt="Capture d&#39;écran 2026-04-26 220746" src="https://github.com/user-attachments/assets/3fafacf9-6777-4882-a599-c3f792fb6a94" />
+<img width="376" height="587" alt="Capture d&#39;écran 2026-04-26 220814" src="https://github.com/user-attachments/assets/12e5aaa2-cf3c-4668-b2ec-e54f3162358a" />
+<img width="360" height="642" alt="Capture d&#39;écran 2026-04-26 220831" src="https://github.com/user-attachments/assets/191a3faa-54de-496f-b3df-b9a93ea39221" />
+<img width="392" height="656" alt="Capture d&#39;écran 2026-04-26 220847" src="https://github.com/user-attachments/assets/d41dc024-c6b0-4bb0-a09d-850468b6086d" />
+<img width="387" height="636" alt="Capture d&#39;écran 2026-04-26 220858" src="https://github.com/user-attachments/assets/4287dc81-14b4-4033-80bc-abeecb566119" />
+<img width="392" height="659" alt="Capture d&#39;écran 2026-04-26 220943" src="https://github.com/user-attachments/assets/273a8da1-73a3-4355-8c18-5e9c31bddafc" />
+
 ---
 
 ## Table of contents
