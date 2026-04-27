@@ -117,12 +117,9 @@ Strings live in `_locales/<lang>/messages.json` - a translation consists of a si
 
 ## Installation
 
-### From the browser store *(coming soon)*
+### From the browser store
 
-The extension will be published on:
-
-- Microsoft Edge Add-ons
-- Chrome Web Store
+https://chromewebstore.google.com/detail/chromapicker-color-picker/glhdgidjphkmhkfggpjalehpopngbkge
 
 ### Manual install (developer mode)
 
